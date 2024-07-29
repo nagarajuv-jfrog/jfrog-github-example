@@ -49,11 +49,11 @@ jobs:
 
           # [Mandatory if JF_ACCESS_TOKEN is not provided]
           # JFrog username with 'read' permissions for Xray. Must be provided with JF_PASSWORD
-          # JF_USER: ${{ secrets.JF_USER }}
+          JF_USER: ${{ secrets.JF_USER }}
 
           # [Mandatory if JF_ACCESS_TOKEN is not provided]
           # JFrog password. Must be provided with JF_USER
-          # JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
+          JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
 
           # [Mandatory]
           # The GitHub token automatically generated for the job
@@ -71,3 +71,5 @@ jobs:
           # need to set this value, if it is set in the frogbot-config.yml file.
           # JF_DEPS_REPO: ""
           JF_PROJECT: ${{ vars.JF_PROJECT }}
+          JF_REQUIREMENTS_FILE: "requirements.txt"
+
